@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="heading">Welcome to Todo List</h1>
+    <div class="centered-div">
+      <input type="text" placeholder="Enter a task" name="todo" #todolist [(ngModel)]="taskSend">
+      <button (click)="submitData()">Submit</button>
+      <ul>
+        <li *ngFor="let item of listTaskArray; let i = index">
+          <span>{{ item }}</span>
+          <button (click)="deleteData(i)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>

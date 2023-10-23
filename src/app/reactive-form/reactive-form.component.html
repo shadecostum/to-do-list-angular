@@ -1,0 +1,16 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginuser()">
+    <input type="text" formControlName="user" placeholder="Enter username">
+    <span *ngIf="userValidator && userValidator.invalid && userValidator.touched">
+enter valid user
+    </span><br>
+    <input type="email" formControlName="email" placeholder="Enter email">
+    <span *ngIf="emailValidator && emailValidator.invalid && emailValidator.touched">
+        enter valid email
+            </span><br>
+    <input type="password" formControlName="password" placeholder="Enter password">
+    <span *ngIf="passwordValidator && passwordValidator.invalid && passwordValidator.touched">
+        enter valid user
+            </span><br>
+    <button type="submit">Login</button>
+  </form> 
+  
